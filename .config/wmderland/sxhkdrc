@@ -120,5 +120,9 @@ super + {h,v}
 super + {Left,Down,Up,Right}
   wmderlandc navigate_{left,down,up,right}
 
+alt + shift + {Left,Right,Up,Down}
+    wmderlandc float_move_{left,right,up,down}
 
+super + shift + {h,l,j,k}
+    wmderlandc resize_{width -3,width +3,height -3,height +3}
 ##################END###########################################################
