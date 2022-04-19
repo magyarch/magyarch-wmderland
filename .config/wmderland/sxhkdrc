@@ -23,7 +23,7 @@ super + shift + e
 
 # Reload sxhkd
 super + {_,shift + } Escape
-    {pkill -USR1 -x sxhkd ;\notify-send "Sxhkd újratölt.", $HOME/.config/polybar/launch.sh && wmderlandc reload ;\notify-send "Polybar újraindult."}
+    {pkill -USR1 -x sxhkd ;\notify-send "Sxhkd újratölt.", killall polybar && wmderlandc reload ;\notify-send "Polybar újraindult."}
 
 # Record and stream
 super + {KP_Home,KP_End}
@@ -83,11 +83,11 @@ super + {F9,F10}
 
 # Decrease/increase volume +-5
 alt + {Up,Down}
-    {pamixer --allow-boost -i 5, pamixer --allow-boost -d 5}
+    {pamixer --allow-boost -i 10, pamixer --allow-boost -d 10}
 
 # Mute volume
 F12
-   layout_manager.sh
+   pamixer --toggle-mute
 
 #################################################################################
 ######################### WMDERLAND Bindings ####################################

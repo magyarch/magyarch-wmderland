@@ -139,6 +139,13 @@ alias gpg-check="gpg2 --keyserver-options auto-key-retrieve --verify"
 alias gpg-retrieve="gpg2 --keyserver-options auto-key-retrieve --receive-keys"
 
 
+#--------------------------- Ratpoison Aliases --------------------------------------
+alias hideroot="ratpoison -c fdump > $HOME/.rpfdump; ratpoison -c 'select -' -c only"
+alias showroot='ratpoison -c "frestore `cat $HOME/.rpfdump`"'
+alias snapshot='import -window root png:$HOME/Képek/Képernyőképek-$(date +%s)$$.png'
+alias splith="exec ratpoison -c ratpoison -c "hsplit" -c next -c "focusright" -c next"
+alias splitv="exec ratpoison -c ratpoison -c "vsplit" -c next -c "focusdown" -c next"
+
 
 # # ex = EXtractor for all kinds of archives
 # # usage: ex <file>
